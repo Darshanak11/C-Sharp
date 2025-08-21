@@ -1,0 +1,24 @@
+using System;
+class Animal
+{
+    protected void Makesound()
+    {
+        Console.WriteLine("Animal");
+    }
+}
+class Dog : Animal
+{
+    public void bark()
+    {
+        Makesound();
+        Console.WriteLine("dog is barking");
+    }
+    class program
+    {
+        static void Main()
+        {
+            Dog d = new Dog();
+            d.bark();
+        }
+    }
+}
