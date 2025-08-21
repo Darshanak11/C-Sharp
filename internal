@@ -1,0 +1,27 @@
+using C;
+using System;
+
+namespace C
+{
+    class point
+    {
+        internal int x;
+        internal int y;
+        public void Test()
+        {
+            Console.WriteLine("This is a test method in the point class.");
+            Console.WriteLine("created a new point object inside");
+        }
+
+
+        class Program : point
+        {
+            static void Main()
+            {
+                point p1 = new point();
+                point p2 = new point();
+                p1.Test();
+            }
+        }
+    }
+}
