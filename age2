@@ -1,0 +1,21 @@
+using System;
+class student
+{
+    private int age;
+    public int Age
+    {
+        get { return age; }
+        set { age = value; }
+    }
+
+    class program
+    {
+        static void Main()
+        {
+            student s1 = new student();
+            s1.Age = 19;
+            Console.WriteLine("student age is" + s1.Age);
+        }
+    }
+}
+
