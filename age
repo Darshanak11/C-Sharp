@@ -1,0 +1,17 @@
+using System;
+class Age
+{
+    private int age;
+    public void ShowAge()
+    {
+        Console.WriteLine("age is"+age);
+    }
+
+}
+class Program
+{
+    static void Main()
+    { 
+        Age a = new Age();
+    }
+}
