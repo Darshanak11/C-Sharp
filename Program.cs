@@ -1,34 +1,28 @@
 ﻿using System;
-public abstract class Shape
-{
-    public abstract void CalculatedArea();
-}
-class Circle : Shape
-{
-    private int r;
-    public void Read(int a)
-    {
-         r = a;
-    }
-    public override void CalculatedArea();
-     {
-        float area = 3.14f * r * r;
-        Console.WriteLine("area of the circle"+area);
-    }
-}
+class Program
 
-class program
-{
-    static void Main()
+{ 
+    static void Main() 
     {
-        Circle c=new Circle();
-        Console.WriteLine("enter the radius");
-        int a= Convert.ToInt32(Console.ReadLine());
-        c.Read(a);
-        c.CalculatedArea;
-    }
-}
+        Console.WriteLine("enter the number");
+        int num = Convert.ToInt32(Console.ReadLine());
+        int sum = 0, temp = num;
 
- 
+        while(temp>0)
+        {
+            int digit = temp % 10;
+            sum += digit*digit*digit;
+            temp /= 10;
+        }
+        if (sum == num)
+        {
+            Console.WriteLine("armstrong");
+        }
+        else
+        {
+            Console.WriteLine("not armstrong");
+        }
+    }
     
 
+}
