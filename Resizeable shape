@@ -1,0 +1,50 @@
+using System;
+
+interface Resizeable
+{
+    void Resizewidth(int width);
+    void ResizeHeight(int height);
+}
+
+class Rectangle : Resizeable
+{
+    private int width;
+    private int height;
+
+    public Rectangle(int width, int height)
+    {
+        this.width = width;
+        this.height = height;
+    }
+
+    // Implementing interface methods correctly
+    public void Resizewidth(int width)
+    {
+        this.width = width;
+        Console.WriteLine("Resized width to " + width);
+    }
+
+    public void ResizeHeight(int height)
+    {
+        this.height = height;
+        Console.WriteLine("Resized height to " + height);
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"Rectangle [width={width}, height={height}]");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Rectangle rect = new Rectangle(10, 20);
+        rect.Display();
+
+        rect.Resizewidth(15);
+        rect.ResizeHeight(25);
+        rect.Display();
+    }
+}
